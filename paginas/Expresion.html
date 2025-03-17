@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Mi Página Web</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            background-color: white;
+        }
+        .header {
+            background-color: #D6C1A6;
+            padding: 45px;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .nav {
+            background-color: #336790;
+            height: 40px;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .nav p {
+            color: white;
+            font-size: 30px; 
+            font-weight: bold;
+            margin: 0;
+        }
+        .content {
+            padding: 50px;
+        }
+        .image-container {
+            width: 80%;
+            margin: 20px auto;
+        }
+        .image-container img {
+            width: 80%;
+            border-radius: 10px;
+        }
+        .footer {
+            background-color: #D6C1A6;
+            padding: 25px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        .boton {
+            display: block;
+            width: fit-content;
+            margin: 20px auto;
+            padding: 10px 20px;
+            background-color: #336790;
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            border-radius: 5px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header"><h1>Expresión Artística</h1></div>
+
+    <div class="nav"><p>Cartel</p></div>
+
+    <div class="content">
+        <div class="image-container">
+            <img src="multimedia/Expresion.png" alt="Imagen personalizada">
+        </div>
+    </div>
+
+    <div class="nav"><p>Logo</p></div>
+
+    <div class="content">
+        <div class="image-container">
+            <img src="multimedia/logo.jpg" alt="Imagen personalizada">
+        </div>
+        <a href="../index.html" class="boton">Regresar a la página principal</a>
+    </div>
+
+    <div class="footer"></div>
+
+</body>
+</html>
+
