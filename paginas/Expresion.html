@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Expresi&oacuten Art&iacutestica</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            background-color: white;
+        }
+        .header {
+            background-color: #D6C1A6;
+            padding: 45px;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .nav {
+            background-color: #336790;
+            height: 40px;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .nav p {
+            color: white;
+            font-size: 30px; 
+            font-weight: bold;
+            margin: 0;
+        }
+        .content {
+            padding: 50px;
+        }
+        .image-container {
+            width: 80%;
+            margin: 20px auto;
+            position: relative;
+            overflow: hidden;
+        }
+        .image-container img {
+            width: 100%;
+            border-radius: 10px;
+            transition: transform 0.1s ease-out;
+        }
+        .footer {
+            background-color: #D6C1A6;
+            padding: 25px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        .boton {
+            display: block;
+            width: fit-content;
+            margin: 20px auto;
+            padding: 10px 20px;
+            background-color: #336790;
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            border-radius: 5px;
+            text-align: center;
+        }
+    </style>
+    <script>
+        function addZoomEffect(image) {
+            image.addEventListener('mousemove', function(e) {
+                const rect = image.getBoundingClientRect();
+                const offsetX = e.clientX - rect.left;
+                const offsetY = e.clientY - rect.top;
+                const centerX = rect.width / 2;
+                const centerY = rect.height / 2;
+
+                const moveX = (offsetX - centerX) / 10;
+                const moveY = (offsetY - centerY) / 10;
+
+            
+                image.style.transform = `scale(1.2) translate(${moveX}px, ${moveY}px)`;
+            });
+
+            image.addEventListener('mouseleave', function() {
+               
+                image.style.transform = 'scale(1)';
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const images = document.querySelectorAll('.zoomable');
+            images.forEach(function(image) {
+                addZoomEffect(image);
+            });
+        });
+    </script>
+</head>
+<body>
+
+    <div class="header"><h1>Expresi&oacuten Art&iacutestica</h1></div>
+
+    <div class="nav"><p>Cartel</p></div>
+
+    <div class="content">
+        <div class="image-container">
+         
+            <img src="multimedia/Expresion.png" alt="Imagen personalizada" class="zoomable">
+        </div>
+    </div>
+
+    <div class="nav"><p>Logo</p></div>
+
+    <div class="content">
+        <div class="image-container">
+            
+            <img src="multimedia/logo.jpg" alt="Imagen personalizada" class="zoomable">
+        </div>
+        <a href="../index.html" class="boton">Regresar a la página principal</a>
+    </div>
+
+    <div class="footer"></div>
+
+</body>
+</html>
+
+
+
